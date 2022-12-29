@@ -7,11 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Include="Game.fs" />
-    <Compile Include="Profession.fs" />
-    <Compile Include="Item.fs" />
-    <Compile Include="InventorySlot.fs" />
-    <Compile Include="Inventory.fs" />
+    <Compile Include="Types.fs" />
+    <Compile Include="Functions.fs" />
   </ItemGroup>
 
 </Project>
