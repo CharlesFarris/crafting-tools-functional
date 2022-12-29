@@ -12,6 +12,8 @@ type ProfessionId = ProfessionId of Guid
 
 type ProfessionName = ProfessionName of string
 
+type RecipeId = RecipeId of Guid
+
 type Profession =
     { Id: ProfessionId
       Name: ProfessionName
@@ -26,8 +28,16 @@ type Item =
       Name: ItemName
       GameId: GameId }
 
-type InventorySlot = { ItemId: ItemId; Quantity: int }
-
 type Inventory =
     { GameId: GameId
-      Slots: InventorySlot list }
+      Slots: Map<Guid, int> }
+
+type RecipeName = RecipeName of string
+
+type Recipe = {
+    Id: RecipeId
+    Name: RecipeName
+    ProfessionId: ProfessionId
+    Inputs: Map<ItemId, int>
+    Outputs: Map<ItemId, int>
+}
